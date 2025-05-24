@@ -10,9 +10,9 @@
   <p style="flex: 1; text-align: center;">Python</p>
 </div>
 <div style="display: flex;">
-  <img alt="excalidraw extension" src="./images/extension-excalidraw.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
-  <img alt="git history extension" src="./images/extension-git-history.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
-  <img alt="python extension" src="./images/extension-python.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
+  <img alt="excalidraw extension" src="./images/extension-excalidraw.png" style="width: 30%; height: auto; object-fit: contain; object-position: center top;" />
+  <img alt="git history extension" src="./images/extension-git-history.png" style="width: 30%; height: auto; object-fit: contain; object-position: center top;" />
+  <img alt="python extension" src="./images/extension-python.png" style="width: 30%; height: auto; object-fit: contain; object-position: center top;" />
 </div>
 
 # 📖 **Part II: Current Working Directory**
