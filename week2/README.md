@@ -11,7 +11,7 @@
 </div>
 <div style="display: flex;">
   <img alt="excalidraw extension" src="./images/extension-excalidraw.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
-  <img alt="git history extension" src="./images/extension-git-history.png" style="width: 33% height: auto; object-fit: contain; object-position: center top;" />
+  <img alt="git history extension" src="./images/extension-git-history.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
   <img alt="python extension" src="./images/extension-python.png" style="width: 33%; height: auto; object-fit: contain; object-position: center top;" />
 </div>
 
