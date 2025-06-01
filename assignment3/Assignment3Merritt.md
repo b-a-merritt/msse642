@@ -80,7 +80,7 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 ## Working with a Local Repository
 
 ### Steps to create a new local repository via the CLI
-1. Create a new directory (optional).
+1. Create a new directory (or navigate to a directory that does not have a `.git` subdirectory).
 2. Initialize Git in that directory.
 3. Verify that the `.git` folder exists.
 
@@ -107,12 +107,13 @@ ls -a
 ```
 
 ### How to clone a repository (and difference vs. creating a new repo)
-- **Cloning** copies an existing remote repository (including all commits, branches, and history) to your local machine.
-- **Creating a new repo** starts a fresh, empty Git repository with no commits or history.
+**Cloning** copies an existing remote repository (including all commits, branches, and history) to your local machine.
+
+**Creating a new repo** starts a fresh, empty Git repository with no commits or history.
 
 ```bash
 # Clone a public repository (example: Git’s official repo)
-git clone https://github.com/git/git.git
+git clone git@github.com:{ username }/{ repo name }.git { optional target }
 ```
 
 ```text
@@ -125,8 +126,9 @@ Resolving deltas: 100% (509839/509839), done.
 ```
 
 - **Difference**:  
-  - **`git clone`**: Copies an existing repository (history, commits, branches).  
-  - **`git init`**: Creates a brand-new repository with no history.
+**`git clone`**: Copies an existing repository (history, commits, branches).  
+
+**`git init`**: Creates a brand-new repository with no history.
 
 ### How to look at the status of your repository
 The `git status` command shows which branch you’re on, files staged for commit, unstaged changes, and untracked files.
@@ -142,13 +144,6 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-- **Information provided by `git status`:**
-  - Current branch (e.g., `main`).
-  - Relationship to remote (ahead/behind).
-  - Files staged for commit.
-  - Files with unstaged changes.
-  - Untracked files.
-
 ### How to stage changes in preparation for a commit
 Use `git add` to stage specific files or all changes.
 
@@ -161,10 +156,6 @@ git add file2.txt file3.txt
 
 # Stage all modified and new files
 git add .
-```
-
-```text
-# (No output on successful staging)
 ```
 
 ### How to commit changes to your local repository
@@ -211,7 +202,7 @@ node_modules/
 .env
 ```
 
-- **Files that should NOT be part of version control:**
+**Files that should NOT be part of version control:**
   - Credentials and secrets (`.env`, `.key`).
   - Compiled code or binaries (`.class`, `*.exe`).
   - OS-generated metadata (`Thumbs.db`, `.DS_Store`).
@@ -273,12 +264,12 @@ From https://github.com/username/my-repo
 ```
 
 ### Difference between `git fetch` and `git pull`
-- **`git fetch`**:  
+**`git fetch`**:  
   - Downloads objects and refs from the remote.  
   - Updates remote-tracking branches (e.g., `origin/main`).  
   - Does **not** modify your local working branch.
 
-- **`git pull`**:  
+**`git pull`**:  
   - Equivalent to `git fetch` followed by `git merge` (or `git rebase` if configured).  
   - Merges the fetched changes into your current branch automatically.
 
@@ -365,39 +356,8 @@ git branch -a
   remotes/origin/main
 ```
 
-- **Local branches** are listed without a prefix.  
-- **Remote-tracking branches** appear as `remotes/origin/<branch-name>`.
-
-### View local branches and create a new branch (before and after)
-1. View local branches.
-2. Create a new branch.
-3. View local branches again.
-
-```bash
-# Before creating a new branch
-git branch
-```
-
-```text
-* main
-  feature-old
-```
-
-```bash
-# Create a new branch named "feature-new"
-git branch feature-new
-```
-
-```bash
-# After creating the new branch
-git branch
-```
-
-```text
-  feature-new
-* main
-  feature-old
-```
+**Local branches** are listed without a prefix.  
+*Remote-tracking branches** appear as `remotes/origin/<branch-name>`.
 
 ### Different ways to switch to a new branch
 - **Using `checkout`:**
