@@ -46,25 +46,34 @@ git config --global core.editor
 ```
 
 ### How to view global and local configuration
-- **Global configuration:**  
-  ```bash
-  git config --global --list
-  ```
+**Global configuration:**  
+```bash
+git config --global --list
+```
+
   _Sample output:_
-  ```text
-  user.name=Your Name
-  user.email=you@example.com
-  core.editor=nano
-  ```
-- **Local (repository-specific) configuration:**  
-  ```bash
-  git config --local --list
-  ```
+```text
+user.email=ben.a.merritt@gmail.com
+user.name=Ben
+pack.windowmemory=100m
+pack.packsizelimit=100m
+pack.threads=1
+core.editor=vim
+```
+**Local (repository-specific) configuration:**  
+```bash
+git config --local --list
+```
+
   _Sample output (inside a repo):_
-  ```text
-  user.name=Your Name for This Repo
-  user.email=you-for-this-repo@example.com
-  ```
+```text
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@personal.github.com:b-a-merritt/msse642.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+```
 
 ---
 
